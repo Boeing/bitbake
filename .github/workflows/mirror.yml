@@ -1,0 +1,24 @@
+name: Update GitHub Mirror
+
+on:
+  #push:
+  #  branches:
+  #    - master # Replace with your branch name
+  schedule:
+     - cron: '0 */2 * * *' # Runs every 2 hours
+
+jobs:
+  update_mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update local from upstream
+        run: |
+          git remote add upstream https://git.openembedded.org/bitbake
+          git remote -v
+          git fetch upstream
+          git fetch --tags
+          git push origin --mirror
