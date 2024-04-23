@@ -1,11 +1,11 @@
 name: Update GitHub Mirror
 
 on:
-  #push:
-  #  branches:
-  #    - master # Replace with your branch name
-  schedule:
-     - cron: '0 */2 * * *' # Runs every 2 hours
+  push:
+    branches:
+      - master # Replace with your branch name
+  #schedule:
+  #   - cron: '0 */2 * * *' # Runs every 2 hours
 
 jobs:
   update_mirror:
