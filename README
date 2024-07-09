@@ -1,0 +1,6 @@
+Bitbake
+=======
+
+This is a mirroring configuration branch and has to be the default for Github Actions to run.
+
+Default branch = https://github.com/Boeing/bitbake/tree/master
